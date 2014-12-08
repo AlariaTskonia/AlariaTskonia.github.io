@@ -73,56 +73,56 @@ var education = {
 var work = {
     "jobs": [
         {
-            "employer": "AT&T – Mobility Contract Administration Center",
+            "employer": "AT&T Mobility - Contract Administration Center",
             "title": "Senior Specialist",
             "location": "Riverside, CA",
             "dates": "December 16, 2013 – Present",
             "description": "Create/manage contracts with outside vendors for cell site maintainance."
         },
         {
-            "employer": "AT&T – Construction & Engineering",
+            "employer": "AT&T California - Construction & Engineering",
             "title": "Project Manager",
             "location": "Riverside, CA",
             "dates": "October 16, 2013 – December 16, 2013",
             "description": "Web developer and back up PC Coordinator."
         },
         {
-            "employer": "AT&T – Construction & Engineering",
+            "employer": "AT&T California - Construction & Engineering",
             "title": "PC Coordinator",
             "location": "Riverside, CA",
             "dates": "May 13, 2013 – October 15, 2013",
             "description": "Loaned as a PC coordinator: maintained, ordered, imaged computer equipment including servers and employee stations/laptops (Dell, HP, Apple)."
         },
         {
-            "employer": "AT&T – Construction & Engineering",
+            "employer": "AT&T California - Construction & Engineering",
             "title": "Engineering Administrator",
             "location": "Anaheim, CA",
             "dates": "May 5, 2013 – October 15, 2013",
             "description": "Title change from Staff Associate due to CWA Union contract renewal: Continued to Maintained/upgraded/created Microsoft Access databases as well as backup the AT&T California Substructure Department."
         },
         {
-            "employer": "AT&T – Construction & Engineering",
+            "employer": "AT&T California - Construction & Engineering",
             "title": "Staff Associate",
             "location": "Anaheim, CA",
             "dates": "May 27, 2007 – May 4, 2013",
             "description": "Maintained/upgraded/created Microsoft Access databases, as well as 1st, 2nd, and 3rd level management support."
         },
         {
-            "employer": "Pacific Bell",
+            "employer": "SBC Pacific Bell / AT&T California",
             "title": "DA Operator",
             "location": "Riverside, CA",
             "dates": "May 2, 2003 – May 26, 2007",
             "description": "411 directory assistance involved searching database systems for phone numbers (and reverse directory searches) in the USA."
         },
         {
-            "employer": "Pacific Bell",
+            "employer": "SBC Pacific Bell",
             "title": "Residential Service Representative",
             "location": "Tustin, CA",
             "dates": "November 2, 2002 – May 1, 2003",
             "description": "Service represenative for USA residential landlines."
         },
         {
-            "employer": "Pacific Bell",
+            "employer": "Pacific Bell / SBC Pacific Bell",
             "title": "DA Operator",
             "location": "Riverside, CA",
             "dates": "August 14, 2000 – November 1, 2002",
@@ -279,19 +279,19 @@ var projects = {
 //Online Classes to be displayed
 
     function displayOnline() {
-        for (oclass in education.onlineCourses) {
-            $("#onlineCourse").append(HTMLonlineClasses);
+        for (onCourse in education.onlineCourses) {
+            $("#onlineCourses").append(HTMLonlineClasses);
 
-            var formattedOTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[oclass].title);
-            var formattedOschool = HTMLonlineSchool.replace("%data%", education.onlineCourses[oclass].school).replace("#", education.onlineCourses[oclass].url);
-            var formattedODates = HTMLonlineDates.replace("%data%", education.onlineCourses[oclass].dates);
-            var formattedOURL = HTMLonlineURL.replace("%data%", education.onlineCourses[oclass].url);
+            var formattedOTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onCourse].title);
+            var formattedOschool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onCourse].school).replace("#", education.onlineCourses[onCourse].url);
+            var formattedODates = HTMLonlineDates.replace("%data%", education.onlineCourses[onCourse].dates);
+            var formattedOURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onCourse].url);
 
             var formattedOSchoolTitle = formattedOTitle + formattedOschool;
 
-            $(".onlineCourse-entry:last").append(formattedOSchoolTitle);
-            $(".onlineCourse-entry:last").append(formattedODates);
-            $(".onlineCourse-entry:last").append(formattedOURL);
+            $(".onlineCourses-entry:last").append(formattedOSchoolTitle);
+            $(".onlineCourses-entry:last").append(formattedODates);
+            $(".onlineCourses-entry:last").append(formattedOURL);
         }
     }
 
