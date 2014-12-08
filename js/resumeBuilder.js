@@ -9,7 +9,7 @@ var bio = {
         "location": "Riverside, CA",
         "googleplus": "https://plus.google.com/u/0/101064500005076612119/about"
     },
-    "welcomeMessage": "Welcome!  Youkoso!  Bienvenue!  ¡Bienvenida!  Benvenuto!  Fáilte!  Willkommen!",
+    "welcomeMessage": "Welcome!  Youkoso!  Bienvenue!  Bienvenida!  Benvenuto!  Failte!  Dobro pozhalovat!  Willkommen!",
     "skills": [
         "Contract Administration",
         " Data Analysis",
@@ -158,11 +158,6 @@ var projects = {
 
 
 //Generic Biography
- /*   if (bio.skills !== null) {
-        var formattedSkill = HTMLskills.replace("%data%", bio.skills)
-        $("#skills").append(formattedSkill);
-    }; */
-
     if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
         for (var i = 0; i < bio.skills.length; i++) {
@@ -219,7 +214,7 @@ var projects = {
     displayWork();
 
 
-//Internationalize Button which doesn't work...
+//Internationalize Button 
     function inName(name) {
         name = bio.name.trim().split(" ");
         console.log(name);
@@ -279,7 +274,7 @@ var projects = {
 
 //Online Classes to be displayed
 
-    function displayOnline() {
+    function displayOnline(){
         for (onCourse in education.onlineCourses) {
             $("#onlineCourses").append(HTMLonlineClasses);
 
