@@ -150,17 +150,31 @@ var work = {
 var projects = {
     "project": [
         {
+            "title": "Udacity NanoDegree Project 1 Version 2",
+            "description": "It's an Orange Mug with gibberish that speaks to my bacon loving heart <3.",
+            "dates": "2011 - 2013",
+            "images": ["images/starrynightbacon.jpg","images/starrynightwhomd.jpg"]
+            
+        },
+        {
+            "title": "Udacity NanoDegree Project 1 Version 1",
+            "description": "I made this and then they upgraded the project...",
+            "dates": "2011 - 2013",
+            "images": ["images/starrynightalexruiz.jpg","images/starrynightorig.jpg"]
+            
+        },
+        {
             "title": "Substructure Database",
             "description": "Created both front and back end systems to manage, maintain, and track distributed vellums, maps, facility records as well as customer and payment data for the AT&T California Substructure Desk",
             "dates": "2011 - 2013",
-            "images": ["http://placehold.it/200/200","http://placehold.it/200/200"]
+            "images": ["images/starrynightdarkside.jpg", "images/starrynightbatman.jpg"]
             
         },
         {
             "title": "Digital Vellum Project",
             "dates": "2010 - 2013",
             "description": "Converted antique vellum maps into a digital archive for AT&T California Engineers and Engineering Administrators",
-            "images": ["http://placehold.it/200/200", "http://placehold.it/200/200"]
+            "images": ["images/starrynightnuts.jpg", "images/hellostarrynight.jpg"]
         }
     ]
     }
