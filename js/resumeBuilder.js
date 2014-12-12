@@ -153,28 +153,32 @@ var projects = {
             "title": "Udacity NanoDegree Project 1 Version 2",
             "description": "It's an Orange Mug with gibberish that speaks to my bacon loving heart <3.",
             "dates": "2011 - 2013",
-            "images": ["images/starrynightbacon.jpg","images/starrynightwhomd.jpg"]
+            "images": ["images/clara.jpg", "images/starrynightwhomd.jpg"],
+            "wurl": "http://alariatskonia.github.io/ndprojects/Project1v2/index.html"
             
         },
         {
             "title": "Udacity NanoDegree Project 1 Version 1",
             "description": "I made this and then they upgraded the project...",
             "dates": "2011 - 2013",
-            "images": ["images/starrynightalexruiz.jpg","images/starrynightorig.jpg"]
+            "images": ["images/starrynightalexruiz.jpg", "images/starrynightorig.jpg"],
+            "wurl": "http://alariatskonia.github.io/ndprojects/project1v1/index.html"
             
         },
         {
             "title": "Substructure Database",
             "description": "Created both front and back end systems to manage, maintain, and track distributed vellums, maps, facility records as well as customer and payment data for the AT&T California Substructure Desk",
             "dates": "2011 - 2013",
-            "images": ["images/starrynightdarkside.jpg", "images/starrynightbatman.jpg"]
+            "images": ["images/starrynightdarkside.jpg", "images/starrynightbatman.jpg"],
+            "wurl": "javascript: void(0)"
             
         },
         {
             "title": "Digital Vellum Project",
             "dates": "2010 - 2013",
             "description": "Converted antique vellum maps into a digital archive for AT&T California Engineers and Engineering Administrators",
-            "images": ["images/starrynightnuts.jpg", "images/hellostarrynight.jpg"]
+            "images": ["images/starrynightnuts.jpg", "images/hellostarrynight.jpg"],
+            "wurl": "javascript: void(0)"
         }
     ]
     }
@@ -254,7 +258,7 @@ var projects = {
         for (proj in projects.project) {
             $("#projects").append(HTMLprojectStart);
 
-            var formattedPTitle = HTMLprojectTitle.replace("%data%", projects.project[proj].title);
+            var formattedPTitle = HTMLprojectTitle.replace("%data%", projects.project[proj].title).replace("#", projects.project[proj].wurl);
             $(".project-entry:last").append(formattedPTitle);
 
             var formattedPDates = HTMLprojectDates.replace("%data%", projects.project[proj].dates);
