@@ -1,0 +1,107 @@
+﻿
+body {
+    font:  300 medium 'Lato', sans-serif;
+    color: #747704;
+}
+.text-muted {
+    color: #bcbbbb;
+}
+.text.thin {
+        font-weight: 100;
+}
+
+/*change up the hightlighter*/
+::selection {
+  background: #e2c6ff; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #99ccff; /* Gecko Browsers */
+}
+/*http://css-tricks.com/overriding-the-default-text-selection-color-with-css/ 
+http://www.color-hex.com/color-wheel/ for the code and
+http://www.w3schools.com/tags/ref_colorpicker.asp for the color wheel*/
+
+.title-super {
+    font-size: 60px;
+}
+.title-logo {
+    margin-top:20;
+}
+/** all that CSS I typed before jumping to the bootsrap verson
+
+* {
+    border: 1px solid green !important;
+}
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+.grid {
+    width: 800px;
+	max-width: 90%;
+}
+@media only screen and (max-width: 300px) {
+	P {
+		Background-color: #226311;
+	}
+}
+
+
+div > img {
+  width: auto;
+  height : auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+.right {
+    float: right;
+}
+*/
+
+/*
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.Col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.33%;
+    padding: 10px;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}
+*/

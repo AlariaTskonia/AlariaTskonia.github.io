@@ -77,63 +77,72 @@ var work = {
             "title": "Senior Specialist",
             "location": "Riverside, CA",
             "dates": "December 16, 2013 - Present",
-            "description": "Create/manage contracts with outside vendors for cell site maintainance."
+            "description": "Create/manage contracts with outside vendors for cell site maintainance.",
+            "wurl": "http://www.att.com"
         },
         {
             "employer": "AT&T California - Construction & Engineering",
             "title": "Project Manager",
             "location": "Riverside, CA",
             "dates": "October 16, 2013 - December 16, 2013",
-            "description": "Web developer and back up PC Coordinator."
+            "description": "Web developer and back up PC Coordinator.",
+            "wurl": "http://www.att.com"
         },
         {
             "employer": "AT&T California - Construction & Engineering",
             "title": "PC Coordinator",
             "location": "Riverside, CA",
             "dates": "May 13, 2013 - October 15, 2013",
-            "description": "Loaned as a PC coordinator: maintained, ordered, imaged computer equipment including servers and employee stations/laptops (Dell, HP, Apple)."
+            "description": "Loaned as a PC coordinator: maintained, ordered, imaged computer equipment including servers and employee stations/laptops (Dell, HP, Apple).",
+            "wurl": "http://www.att.com"
         },
         {
             "employer": "AT&T California - Construction & Engineering",
             "title": "Engineering Administrator",
             "location": "Anaheim, CA",
             "dates": "May 5, 2013 - October 15, 2013",
-            "description": "Title change from Staff Associate due to CWA Union contract renewal: Continued to Maintained/upgraded/created Microsoft Access databases as well as backup the AT&T California Substructure Department."
+            "description": "Title change from Staff Associate due to CWA Union contract renewal: Continued to Maintained/upgraded/created Microsoft Access databases as well as backup the AT&T California Substructure Department.",
+            "wurl": "http://www.att.com"
         },
         {
             "employer": "AT&T California - Construction & Engineering",
             "title": "Staff Associate",
             "location": "Anaheim, CA",
             "dates": "May 27, 2007 - May 4, 2013",
-            "description": "Maintained/upgraded/created Microsoft Access databases, as well as 1st, 2nd, and 3rd level management support."
+            "description": "Maintained/upgraded/created Microsoft Access databases, as well as 1st, 2nd, and 3rd level management support.",
+            "wurl": "http://www.att.com"
         },
         {
             "employer": "SBC Pacific Bell / AT&T California",
             "title": "DA Operator",
             "location": "Riverside, CA",
             "dates": "May 2, 2003 - May 26, 2007",
-            "description": "411 directory assistance involved searching database systems for phone numbers (and reverse directory searches) in the USA."
+            "description": "411 directory assistance involved searching database systems for phone numbers (and reverse directory searches) in the USA.",
+            "wurl": "http://www.att.com"
         },
         {
             "employer": "SBC Pacific Bell",
             "title": "Residential Service Representative",
             "location": "Tustin, CA",
             "dates": "November 2, 2002 - May 1, 2003",
-            "description": "Service represenative for USA residential landlines."
+            "description": "Service represenative for USA residential landlines.",
+            "wurl": "http://www.att.com"
         },
         {
             "employer": "Pacific Bell / SBC Pacific Bell",
             "title": "DA Operator",
             "location": "Riverside, CA",
             "dates": "August 14, 2000 - November 1, 2002",
-            "description": "411 directory assistance involved searching database systems for phone numbers (and reverse directory searches) in the USA."
+            "description": "411 directory assistance involved searching database systems for phone numbers (and reverse directory searches) in the USA.",
+            "wurl": "http://www.att.com"
         },
         {
             "employer": "Community Medical Group",
             "title": "Record Maintenance & Researcher",
             "location": "Riverside, CA",
             "dates": "June 1, 2000 - August 1, 2000",
-            "description": "Maintained, filed, and researched patient medical records."
+            "description": "Maintained, filed, and researched patient medical records.",
+            "wurl": "http://www.comgri.com"
         }
     ]
 }
@@ -198,7 +207,7 @@ var projects = {
         for (job in work.jobs) {
             $("#workExperience").append(HTMLworkStart);
 
-            var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+            var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer).replace("#", work.jobs[job].wurl);
             var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
             var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
             var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
@@ -272,7 +281,17 @@ var projects = {
     education.display();
 
 
-//Online Classes to be displayed
+    //Online Classes to be displayed
+/*
+  if (bio.skills.length > 0) {
+        $("#header").append(HTMLskillsStart);
+        for (var i = 0; i < bio.skills.length; i++) {
+            var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+            $("#skills").append(formattedSkill);
+        }
+    }
+*/
+
 
     function displayOnline(){
         for (onCourse in education.onlineCourses) {

@@ -1,0 +1,36 @@
+﻿/*sets formatting for main styles*/
+
+body {
+    font: 14px/250% 'Lucida Grande', sans-serif;
+    color: #666;
+    line-height: 250%;
+}
+
+
+h1 {
+    font-size: 49px;
+    margin-top: 41px;
+}
+
+h2 {
+    color: #f07c17;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+/*aligns image with heading2*/
+
+img {
+    padding-top: 22px;
+}
+
+
+/* aligns and outlines box containing list*/
+
+.box1 
+{
+    margin-top: 36px;
+    padding: 0 0 30px 30px;
+    border: 1px solid #ccc;
+}
