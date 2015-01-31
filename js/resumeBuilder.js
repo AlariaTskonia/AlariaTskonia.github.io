@@ -1,4 +1,4 @@
-var bio = {
+﻿var bio = {
     "name": "Clara Reyes",
     "role": "Senior Sourcing Contract Specialist",
     "contacts": {
@@ -74,9 +74,17 @@ var work = {
     "jobs": [
         {
             "employer": "AT&T Mobility - Contract Administration Center",
-            "title": "Senior Specialist",
+            "title": "Senior Sourcing / Contract Specialist - CAC Manager",
             "location": "Riverside, CA",
-            "dates": "December 16, 2013 - Present",
+            "dates": "January 12, 2015 - Present",
+            "description": "Oversees Volume Bid contracts, all invoicing, internal processes, escalations, maintenance trends, force majeur declarations, and manages the financial progress while crceating high level and detailed reports for the West Region MCAC.",
+            "wurl": "http://www.att.com"
+        },
+        {
+            "employer": "AT&T Mobility - Contract Administration Center",
+            "title": "Senior Sourcing / Contract Specialist - BZO/PMO",
+            "location": "Riverside, CA",
+            "dates": "December 16, 2013 - January 11, 2014",
             "description": "Create/manage contracts with outside vendors for cell site maintainance.",
             "wurl": "http://www.att.com"
         },
@@ -101,7 +109,7 @@ var work = {
             "title": "Engineering Administrator",
             "location": "Anaheim, CA",
             "dates": "May 5, 2013 - October 15, 2013",
-            "description": "Title change from Staff Associate due to CWA Union contract renewal: Continued to Maintained/upgraded/created Microsoft Access databases as well as backup the AT&T California Substructure Department.",
+            "description": "Title change from Staff Associate due to CWA Union contract renewal: Continued to maintaine/upgrade/create Microsoft Access databases as well as backup the AT&T California Substructure Department.",
             "wurl": "http://www.att.com"
         },
         {
@@ -277,38 +285,61 @@ var projects = {
     }
     projects.display();
 
+    /* per Haopei Yang via Hip Chat:
+    
+    Haopei Yang	
+work.jobs is an array, and not an object, so I think maybe this is more appropriate? 
 
-//Education to be displayed
+for(var i = 0, i < length; i++) {...}
+    
+    
+    it might be less difficult if you define those long object accesses inside variables:
+
+    var projects = projects.project;
+    var images;
+    for (var p in projects) {
+    imgUrls = p.images;
+    for (var url in imgUrls) {
+    console.log(url)
+    }
+    } 
+    
+    
+    
+    */
+
+
+    //Education to be displayed
     education.display = function () {
-        for (edu in education.schools) {
-            $("#education").append(HTMLschoolStart);
+    for (edu in education.schools) {
+    $("#education").append(HTMLschoolStart);
 
-            var formattedSName = HTMLschoolName.replace("%data%", education.schools[edu].name).replace("#", education.schools[edu].url);
-            var formattedSlocation = HTMLschoolLocation.replace("%data%", education.schools[edu].location);
-            var formattedSYears = HTMLschoolDates.replace("%data%", education.schools[edu].years);
-            var formattedSDegree = HTMLschoolDegree.replace("%data%", education.schools[edu].degree);
-            var formattedSMajor = HTMLschoolMajor.replace("%data%", education.schools[edu].major);
+    var formattedSName = HTMLschoolName.replace("%data%", education.schools[edu].name).replace("#", education.schools[edu].url);
+    var formattedSlocation = HTMLschoolLocation.replace("%data%", education.schools[edu].location);
+    var formattedSYears = HTMLschoolDates.replace("%data%", education.schools[edu].years);
+    var formattedSDegree = HTMLschoolDegree.replace("%data%", education.schools[edu].degree);
+    var formattedSMajor = HTMLschoolMajor.replace("%data%", education.schools[edu].major);
 
-            $(".education-entry:last").append(formattedSName);
-            $(".education-entry:last").append(formattedSlocation);
-            $(".education-entry:last").append(formattedSYears);
-            $(".education-entry:last").append(formattedSDegree);
-            $(".education-entry:last").append(formattedSMajor);
-        }
+    $(".education-entry:last").append(formattedSName);
+    $(".education-entry:last").append(formattedSlocation);
+    $(".education-entry:last").append(formattedSYears);
+    $(".education-entry:last").append(formattedSDegree);
+    $(".education-entry:last").append(formattedSMajor);
+    }
     }
     education.display();
 
 
     //Online Classes to be displayed
-/*
-  if (bio.skills.length > 0) {
-        $("#header").append(HTMLskillsStart);
-        for (var i = 0; i < bio.skills.length; i++) {
-            var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
-            $("#skills").append(formattedSkill);
-        }
+    /*
+    if (bio.skills.length > 0) {
+    $("#header").append(HTMLskillsStart);
+    for (var i = 0; i < bio.skills.length; i++) {
+    var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+    $("#skills").append(formattedSkill);
     }
-*/
+    }
+    */
 
 
     function displayOnline(){
@@ -334,3 +365,172 @@ var projects = {
 
 
     $("#mapDiv").append(googleMap);
+
+    /* hip chat notes:
+    Haopei Yang	
+Clara, looking at your HTML, your img tag looks like this:
+
+<img src="http://placehold.it/200/200,http://placehold.it/200/200">
+6:05 PM
+Dallas Frank	
+Yeah, once I realized sublime had a build system that pushed the final button. Love it.
+6:05 PM
+Dallas Frank	
+Hmm
+6:07 PM
+Haopei Yang	
+hmm, looks like a looping problem. Let me see..
+6:07 PM
+Dallas Frank	
+Yeah.. you are killing the stack somewhere
+line 1, 14, or 27
+6:07 PM
+Clara Reyes	
+reopening - i have a few copies because github didnt work at first
+6:07 PM
+Clara Reyes	
+in the html?
+6:09 PM
+Dallas Frank	
+Probably the embedded js since it says main.js but you have no main.js file.  Not sure yet.
+6:09 PM
+Clara Reyes	
+i have what the course gave me unless i forgot to uplad something
+6:09 PM
+Dawoon Choi	
+Hey all I'm going to a web dev meetup today, and I have never been to any yet.
+Should I bring my laptop with me?
+6:10 PM
+Clara Reyes	
+upload*
+6:10 PM
+Dallas Frank	
+Yes you should
+I have never been to one either.. but you never know what you might want it for
+6:10 PM
+Dawoon Choi	
+Okay thanks :)
+6:11 PM
+Dallas Frank	
+Before I go looking through your JS for the endless loop thing.. did you upload the newest commit?
+6:12 PM
+Clara Reyes	
+dont remember - havent touched this since i submitted it
+6:12 PM
+Dallas Frank	
+Is that a yes?  :)
+6:12 PM
+Clara Reyes	
+i can commit it - i made it more visual studio happy but those rules dont make Udacity happy
+6:13 PM
+Dallas Frank	
+Mostly just don't want to find a bug you already fixed is all
+6:13 PM
+Clara Reyes	
+syncing~
+No local changes - i think that was the most curent
+6:14 PM
+Dallas Frank	
+ok
+6:14 PM
+Clara Reyes	
+the void links was the last one so yep
+6:15 PM
+Dallas Frank	
+Looks like it may be map related
+6:17 PM
+Clara Reyes	
+i hate that map
+6:17 PM
+Dallas Frank	
+Yeah, it is the map stuff in helper.js
+6:18 PM
+Haopei Yang	
+I wonder if it is because of the for-in loop
+
+From MDN: "The for..in statement iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed.:
+6:19 PM
+Haopei Yang	
+I added 'var' inside the for-in loops, and half of the errors were gone.. like this:
+
+for (var job in work.jobs) {
+6:20 PM
+Dallas Frank	
+Also, your link has the url twice because you are using an array on line 147 and 153 of resumeBuilder.js instead of just a string
+6:20 PM
+Clara Reyes	
+would string be better?
+6:21 PM
+Haopei Yang	
+work.jobs is an array, and not an object, so I think maybe this is more appropriate? 
+
+for(var i = 0, i < length; i++) {...}
+6:21 PM
+Dallas Frank	
+Depends on your for loop
+But right now you are putting the whole thing into the url
+6:21 PM
+Dallas Frank	
+line 250 puts the entire array in place of %data%
+6:22 PM
+Clara Reyes	
+This is a start - alright - ill adjust that
+6:22 PM
+Dallas Frank	
+Which actually works oddly but only because of weirdness with the url.  It should break and normally would.
+6:22 PM
+Clara Reyes	
+lol
+6:23 PM
+Dallas Frank	
+Chrome is like "ok I think I know what you want"
+6:23 PM
+Clara Reyes	
+Chrome and Mozilla didnt mind
+i kinda roll with if it works...then yea!
+6:23 PM
+Dallas Frank	
+Yeah, they see that closing quote and ignore the rest
+But obviously having 2 copies of the url string is not quite what you want :)
+6:23 PM
+Clara Reyes	
+no - i actually wanted more urls but it messed up the layout with its inate formatting or urls
+6:24 PM
+Dallas Frank	
+But yeah.. that is an easy enough fix.  The map thing you will have to look at more.  I know originally the resume file used an old api.
+6:24 PM
+Clara Reyes	
+old is right - VS hated it
+6:24 PM
+Dallas Frank	
+You can have more than one url.  You would just need to specify which one in the array instead of applying the whole thing
+6:24 PM
+Dallas Frank	
+var formattedPImg = HTMLprojectImage.replace("%data%", projects.project[proj].images[0]);
+for example would be the first one
+6:25 PM
+Dallas Frank	
+Nice pic btw.  Much better than mine with funny floral designs or whatever behind it.  I am going to go spend some family time but if you run into any problems toss them in here. If no one else snatches them up I will leave an answer for you to find later :)
+6:27 PM
+Clara Reyes	
+thank you all so  much! :D
+ill work on it - i got all weekend
+6:28 PM
+Haopei Yang	
+it might be less difficult if you define those long object accesses inside variables:
+
+var projects = projects.project;
+var images;
+for (var p in projects) {
+  imgUrls = p.images;
+  for (var url in imgUrls) {
+    console.log(url)
+  }
+}
+Show less
+6:40 PM
+Haopei Yang	
+You'll maintain some sanity this way.
+6:41 PM
+Haopei Yang	
+oops, the second line should be: var imgUrls;*/
