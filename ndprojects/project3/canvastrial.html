@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Empty Canvasr</title>
+</head>
+<body>
+
+    <canvas id="c" width="1000" height="1000"></canvas>
+    <script type="text/jscript">
+
+        var c = document.querySelector("#c");
+        var ctx = c.getContext("2d");
+
+        /*        ctx.strokeStyle = "black";
+
+        ctx.strokeRect(50, 50, 100, 100);
+        ctx.beginPath();
+        ctx.moveTo(75, 75);
+        ctx.lineTo(125, 75);
+        ctx.lineTo(125, 125);
+        ctx.lineTo(75, 75);
+
+        ctx.fillStyle = "blue";
+        ctx.fill();
+
+        ctx.strokeText("CANVAS MEMES!", 50, 10);
+        cts.fillStyle = "white"; */
+
+        ctx.font = "36pt Impact";
+        ctx.testAlign = "center";
+
+        ctx.fillStyle = "white";
+        ctx.fillText("CANVAS MEMES!", c.width/2, 40);
+
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 3;
+        ctx.strokeText("CANVAS MEMES!", c.width / 2, 40);
+
+   
+   /*     ctx.moveTo(50, 50);
+        ctx.lineTo(150, 50);
+        ctx.lineTo(150, 150);
+        ctx.lineTo(50, 150);
+        ctx.lineTo(50, 50);
+        ctx.stroke(); */
+
+    </script>
+</body>
+</html>
