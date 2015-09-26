@@ -152,26 +152,41 @@ var work = {
 var projects = {
     "project": [
         {
+            "title": "Meme Generator",
+            "dates": "February 2015",
+            "description": "Simple Meme Generator as completed per the Nanaodegree via Udacity",
+            "images": ["images/starrynightdarkside.jpg"],
+            "wurl": "http://alariatskonia.github.io/ndprojects/project3/MemeGen.html"
+        },
+        {
             "title": "Udacity NanoDegree Project 1 Version 2",
             "description": "It's an Orange Mug with gibberish that speaks to my bacon loving heart <3.",
-            "dates": "2011 - 2013",
-            "images": ["images/starrynightorig.jpg"],
+            "dates": "December 2014",
+            "images": ["images/starrynightbacon.jpg"],
             "wurl": "http://alariatskonia.github.io/ndprojects/Project1v2/index.html"
-            
+
         },
         {
             "title": "Udacity NanoDegree Project 1 Version 1",
             "description": "Made this and then they upgraded the project...",
-            "dates": "2011 - 2013",
-            "images": ["images/starrynightalexruiz.jpg"],
+            "dates": "December 2014",
+            "images": ["images/starrynightbatman.jpg"],
             "wurl": "http://alariatskonia.github.io/ndprojects/project1v1/index.html"
-            
+
         },
+        {
+            "title": "Asteroids",
+            "dates": "November 2014",
+            "description": "One of the games completed per the Nanodegree via Udacity",
+            "images": ["images/starrynightwhomd.jpg"],
+            "wurl": "http://alariatskonia.github.io/ndprojects/asteroids/index.html"
+        },
+        
         {
             "title": "Substructure Database",
             "description": "Created both front and back end systems to manage, maintain, and track distributed vellums, maps, facility records as well as customer and payment data for the AT&T California Substructure Desk",
             "dates": "2011 - 2013",
-            "images": ["images/starrynightbatman.jpg"],
+            "images": ["images/starrynightorig.jpg"],
             "wurl": "javascript: void(0)"
             
         },
@@ -179,9 +194,10 @@ var projects = {
             "title": "Digital Vellum Project",
             "dates": "2010 - 2013",
             "description": "Converted antique vellum maps into a digital archive for AT&T California Engineers and Engineering Administrators",
-            "images": ["images/starrynightnuts.jpg"],
+            "images": ["images/starrynightalexruiz.jpg"],
             "wurl": "javascript: void(0)"
         }
+                
     ]
     }
 
