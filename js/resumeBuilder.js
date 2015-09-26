@@ -77,7 +77,7 @@ var work = {
         {
             "employer": "AT&T Mobility - Contract Administration Center",
             "title": "Senior Sourcing / Contract Specialist - BZO/PMO",
-            "location": "Riverside, CA",
+            "location": "Laguna Niguel, CA",
             "dates": "December 16, 2013 - January 11, 2014",
             "description": "Create/manage contracts with outside vendors for cell site maintainance.",
             "wurl": "http://www.att.com"
