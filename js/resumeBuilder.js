@@ -169,8 +169,7 @@ var projects = {
             "title": "Udacity NanoDegree Project 1 Version 1",
             "description": "I made this and then they upgraded the project...",
             "dates": "2011 - 2013",
-            "images": ["../images/starrynightalexruiz.jpg", "../images/starrynightorig.jpg"
-"],
+            "images": ["../images/starrynightalexruiz.jpg", "../images/starrynightorig.jpg"],
             "wurl": "http://alariatskonia.github.io/ndprojects/project1v1/index.html"
             
         },
