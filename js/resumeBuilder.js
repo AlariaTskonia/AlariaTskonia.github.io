@@ -1,6 +1,6 @@
 ﻿var bio = {
     "name": "Clara Reyes",
-    "role": "Senior Contract/Sourcing Specialist",
+    "role": "Senior Sourcing Contract Specialist",
     "contacts": {
         "mobile": "951.555.5555",
         "email": "cr4725cs@gmail.com",
@@ -38,7 +38,7 @@ var education = {
             "years": "1996 - 2000",
             "degree": "High School Diploma",
             "major": "General Education",
-            "url": "http://alvordschools.org/Domain/28"
+            "url": "http://www.alvord.k12.ca.us/lasierra/"
         }
     ],
     "onlineCourses": [
@@ -171,6 +171,9 @@ var projects = {
             "description": "Made this and then they upgraded the project...",
             "dates": "December 2014",
             "images": ["images/starrynightbatman.jpg"],
+            "description": "I made this and then they upgraded the project...",
+            "dates": "2011 - 2013",
+            "images": ["images/starrynightalexruiz.jpg", "images/starrynightorig.jpg"],
             "wurl": "http://alariatskonia.github.io/ndprojects/project1v1/index.html"
 
         },
@@ -370,9 +373,6 @@ for(var i = 0, i < length; i++) {...}
     }
 
     displayOnline();
-
-
-
 
     $("#mapDiv").append(googleMap);
 
