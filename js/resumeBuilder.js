@@ -171,9 +171,6 @@ var projects = {
             "description": "Made this and then they upgraded the project...",
             "dates": "December 2014",
             "images": ["images/starrynightbatman.jpg"],
-            "description": "I made this and then they upgraded the project...",
-            "dates": "2011 - 2013",
-            "images": ["images/starrynightalexruiz.jpg", "images/starrynightorig.jpg"],
             "wurl": "http://alariatskonia.github.io/ndprojects/project1v1/index.html"
 
         },
