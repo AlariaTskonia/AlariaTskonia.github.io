@@ -5,7 +5,7 @@ var Enemy = function() {
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
+    this.sprite = 'images/enemy-bug.png';  //Alara:  Wouldn't CSS Image sprites load faster? http://www.w3schools.com/css/css_image_sprites.asp
 
     this.x = -101;  //Alaria: delcares x axis location for bug
     this.y = Math.floor(Math.random() * 3) * 83 + 60; //Alaria: delcares y axis location for bug
@@ -21,21 +21,20 @@ Enemy.prototype.update = function (dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
 
-    this.x += this.speed * dt;  //Alaria: sets the speed using the dt parameter
-    if (this.x > 505) {          //Alaria: if x axis is greater than 505 pixels
-        this.x = -101;          //Alaria: the bug will start off screen
-        this.y = Math.floor(Math.random() * 3) * 83 + 60;  //Alaria: at a random y axis
+    this.x += this.speed * dt;                              //Alaria: sets the speed using the dt parameter
+    if (this.x > 505) {                                     //Alaria: if x axis is greater than 505 pixels
+        this.x = -101;                                      //Alaria: the bug will start off screen
+        this.y = Math.floor(Math.random() * 3) * 83 + 60;   //Alaria: at a random y axis
         this.speed = Math.floor(Math.randomm() * 400) + 50; //Alaria: at random speeds
     }
 
-    //Craigs collision code sans console log schtuff
-    var collision = Math.abs(player.x = this.x);            //Alaria: when the images share the same x axis
+    var collision = Math.abs(player.x = this.x);            //Alaria: when the images share the same absolute value x axis *The abs() method returns the absolute value of a number. http://www.w3schools.com/jsref/jsref_abs.asp
     if (collision < 50.5 && this.y === player.y + 18.5) {   //Alaria: a collision is when both images have the same y axis
         player.y = 373.5;                                   //Alaria: player y axis jumps to 373.5 pixels
-        player.loses += 1;                                  //Alaria: loss score gets +1
-        player.score = player.wins - player.loses;          //Alaria: total score is wins minus loses
-        document.getElementById("loses").innerHTML = player.loses; //Alaria: loss count
-        document.getElementById("total").innerHTML = player.score; //Alaria: total score
+//        player.loses += 1;                                  //Alaria: loss score gets +1
+//        player.score = player.wins - player.loses;          //Alaria: total score is wins minus loses
+//        document.getElementById("loses").innerHTML = player.loses; //Alaria: loss count
+//        document.getElementById("total").innerHTML = player.score; //Alaria: total score
     }
 };
 
@@ -54,9 +53,9 @@ var Player = function () {
     this.sprite = "/images/char-cat-girl.png";
     this.x = 202;
     this.y = 373.5;
-    this.score = 0;
-    this.wins = 0;
-    this.loses = 0;
+//    this.score = 0;
+//    this.wins = 0;
+//    this.loses = 0;
 };
 
 Player.prototype.update = function(dt) {
@@ -95,14 +94,14 @@ Player.prototype.handleInput = function(keyPress) {
         case "up":
             if (this.y > 123) {
                 this.y -= 83;
-            } else if (this.y < 42) {
-                this.wins +=1;
-                this.score = this.wins - this.losses;
-                console.log("You Win! \n Wins: " + this.wins + "\n Loses: " + this.loses + "\n Score: " + this.score);
-                this.y = 373.5;
-                document.getElementById("wins").innerHTML = this.wins;
-                document.getElementById("total").innerHTML = this.score;
-            }
+            } //else if (this.y < 42) {
+//                this.wins +=1;
+//                this.score = this.wins - this.losses;
+//                console.log("You Win! \n Wins: " + this.wins + "\n Loses: " + this.loses + "\n Score: " + this.score);
+//                this.y = 373.5;
+//                document.getElementById("wins").innerHTML = this.wins;
+//                document.getElementById("total").innerHTML = this.score;
+//            }
             break;
         
     }
@@ -111,8 +110,9 @@ Player.prototype.handleInput = function(keyPress) {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-allEnemies = [];
-player = new Player[];
+var allEnemies = [Enemy];
+
+var player = new Player();
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
