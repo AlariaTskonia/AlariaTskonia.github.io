@@ -66,7 +66,47 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+Player.prototype.handleInput = function(keyPress) {
+    switch(keyPress) {
+        case "left":
+            if (this.x >0) {
+                this.x -= 101;
+            } else {
+                console.log("Cannot move offfscreen");
+            }
+            break;
 
+        case "right":
+            if (this.x <404) {
+                this.x += 101;
+            } else {
+                    console.log("Cannot move offscreen");
+            }
+            break;
+
+        case "down":
+            if this.y <373) {
+                this.y += 83;
+                } else {
+                    console.log("Cannot move offscreen");
+                }
+                break;
+
+        case "up":
+            if (this.y >123) {
+                this.y -= 83);
+            } else if (this.y <42) {
+                this.wins +=1;
+                this.score = this.wins - this.losses;
+                console.log("You Win! \n Wins: " + this.wins + "\n Loses: " + this.loses + "\n Score: " + this.score);
+                this.y = 373.5;
+                document.getElementById("wins").innerHTML = this.wins;
+                document.getElementById("total").innerHTML = this.score;
+            }
+            break;
+        
+    }
+}
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
