@@ -69,7 +69,7 @@ Player.prototype.render = function() {
 Player.prototype.handleInput = function(keyPress) {
     switch(keyPress) {
         case "left":
-            if (this.x >0) {
+            if (this.x > 0) {
                 this.x -= 101;
             } else {
                 console.log("Cannot move offfscreen");
@@ -77,25 +77,25 @@ Player.prototype.handleInput = function(keyPress) {
             break;
 
         case "right":
-            if (this.x <404) {
+            if (this.x < 404) {
                 this.x += 101;
             } else {
-                    console.log("Cannot move offscreen");
+                console.log("Cannot move offscreen");
             }
             break;
 
         case "down":
-            if this.y <373) {
+            if (this.y < 373) {
                 this.y += 83;
-                } else {
-                    console.log("Cannot move offscreen");
-                }
-                break;
+            } else {
+                console.log("Cannot move offscreen");
+            }
+            break;
 
         case "up":
-            if (this.y >123) {
-                this.y -= 83);
-            } else if (this.y <42) {
+            if (this.y > 123) {
+                this.y -= 83;
+            } else if (this.y < 42) {
                 this.wins +=1;
                 this.score = this.wins - this.losses;
                 console.log("You Win! \n Wins: " + this.wins + "\n Loses: " + this.loses + "\n Score: " + this.score);
