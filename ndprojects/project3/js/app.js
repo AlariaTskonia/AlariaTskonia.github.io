@@ -34,7 +34,7 @@ Enemy.prototype.update = function (dt) {
         player.y = 373.5;                                   //Alaria: player y axis jumps to 373.5 pixels
         player.loses += 1;                                  //Alaria: loss score gets +1
         player.score = player.wins - player.loses;          //Alaria: total score is wins minus loses
-        document.getElementById("loses").innerHTML = player.loses; //Alaria: lose count
+        document.getElementById("loses").innerHTML = player.loses; //Alaria: loss count
         document.getElementById("total").innerHTML = player.score; //Alaria: total score
     }
 };
@@ -49,6 +49,22 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
+
+var Player = function () {
+    this.sprite = "/images/char-cat-girl.png";
+    this.x = 202;
+    this.y = 373.5;
+    this.score = 0;
+    this.wins = 0;
+    this.loses = 0;
+};
+
+Player.prototype.update = function(dt) {
+};
+
+Player.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
 
 
 // Now instantiate your objects.
