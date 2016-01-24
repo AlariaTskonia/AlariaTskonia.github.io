@@ -29,7 +29,17 @@ Enemy.prototype.update = function (dt) {
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+
+    //Craigs collision code sans console log schtuff
+    var collision = Math.abs(player.x = this.x);            //Alaria: when the images share the same x axis
+    if (collision <50.5 && this.y === player.y + 18.5) {    //Alaria: a collision is when both images have the same y axis
+        player.y = 373.5;                                   //Alaria: player y axis jumps to 373.5 pixels
+        player.loses +=1;                                   //Alaria: loss score gets +1
+        player.score = player.wins - player.loses;          //Alaria: total score is wins minus loses
+    }
 };
+
+
 
 // Now write your own player class
 // This class requires an update(), render() and
