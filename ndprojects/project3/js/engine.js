@@ -87,7 +87,7 @@ var Engine = (function(global) {
      * objects within your allEnemies array as defined in app.js and calls
      * their update() methods. It will then call the update function for your
      * player object. These update methods should focus purely on updating
-     * the data/properties related to  the object. Do your drawing in your
+     * the data/properties related to the object. Do your drawing in your
      * render methods.
      */
     function updateEntities(dt) {
