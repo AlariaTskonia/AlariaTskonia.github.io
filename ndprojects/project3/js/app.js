@@ -64,7 +64,7 @@ Enemy.prototype.render = function () {
 //Alaria Code Start***** 
 
 var Player = function () {
-    this.sprite = "images/char-boy.png"; /// <reference path="../images/char-cat-girl.png" />
+    this.sprite = "images/char-cat-girl.png"; /// <reference path="../images/char-cat-girl.png" />
     this.x = 202;
     this.y = 373.5;
     this.score = 0;
