@@ -154,7 +154,7 @@ var projects = {
         {
             "title": "Clone of a Frogger",
             "dates": "October 2015",
-            "description": "Frogger-ish game as completed per the Nanaodegree via Udacity (much love to Namco and their far better original)",
+            "description": "Frogger-ish game as completed per the Nanaodegree via Udacity (much love to Konami's フロッガー)",
             "images": ["images/hellostarrynight.jpg"],
             "wurl": "http://alariatskonia.github.io/ndprojects/project3/index.html"
         },
