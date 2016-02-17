@@ -38,6 +38,8 @@ Enemy.prototype.update = function (dt) {
         this.speed = Math.floor(Math.random() * 400) + 50; //Alaria: at random speeds rounded down
 
     }
+
+//add a limit to rgn http://codereview.stackexchange.com/questions/62018/prevent-repetitive-random-numbers
     
     var collision = Math.abs(player.x - this.x);            //Alaria: when the images share the same absolute value x axis *The abs() method returns the absolute value of a number. http://www.w3schools.com/jsref/jsref_abs.asp
     if (collision < 50.5 && this.y === player.y + 18.5) {   //Alaria: a collision is when both images have the same y axis
@@ -64,7 +66,7 @@ Enemy.prototype.render = function () {
 //Alaria Code Start***** 
 
 var Player = function () {
-    this.sprite = "images/char-cat-girl.png"; /// <reference path="../images/char-cat-girl.png" />
+    this.sprite = "images/char-cat-girl.png"; // <reference path="../images/char-cat-girl.png" />
     this.x = 202;
     this.y = 373.5;
     this.score = 0;
