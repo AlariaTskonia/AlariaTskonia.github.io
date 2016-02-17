@@ -6,11 +6,20 @@
     <title>Clara's Effective JavaScript: Frogger</title>
     <link rel="stylesheet" href="css/style.css">
     </head>
-<h1>Scoreboard</h1>
-<div>
-    <div id=wins>Wins</div>
-    <div id=loses>Loses</div>
-</div>
+
+<table id=score>
+    <tr>
+        <th colspan="2">Scoreboard</th>
+    </tr>
+    <tr>
+        <th id=winsT>You</th>
+        <th id=lossT>Bugs</th>
+    </tr>
+    <tr>
+        <td id=wins>0</td>
+        <td id=loses>0</td>
+    </tr>
+</table>
 
 <body>
     <script src="js/resources.js"></script>
