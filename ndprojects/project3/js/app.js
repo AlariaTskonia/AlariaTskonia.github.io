@@ -47,7 +47,6 @@ Enemy.prototype.update = function (dt) {
         player.loses += 1;                                  //Alaria: loss score gets +1
         player.score = player.wins - player.loses;          //Alaria: total score is wins minus loses
         document.getElementById("loses").innerHTML = player.loses; //Alaria: loss count
-        document.getElementById("total").innerHTML = player.score; //Alaria: total score
     }
 };
 
@@ -81,13 +80,31 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-Player.prototype.handleInput = function (keyPress) {
+//shake Screen code start http://www.javascriptsource.com/image-effects/shake-screen.html
+
+function shake(n) {
+if (parent.moveBy) {
+for (i = 10; i > 0; i--) {
+for (j = n; j > 0; j--) {
+parent.moveBy(0,i);
+parent.moveBy(i,0);
+parent.moveBy(0,-i);
+parent.moveBy(-i,0);
+         }
+      }
+   }
+}
+
+//Shake Screen code end
+
+
+Player.prototype.handleInput = function (keyPress) { // shake image http://dynamicdrive.com/dynamicindex4/shake.htm or http://www.w3schools.com/jquery/eff_animate.asp 
     switch (keyPress) {
         case "left":
             if (this.x > 0) {
                 this.x -= 101
             } else {
-                console.log("Cannot move offscreen");
+                console.log("Cannot move left offscreen");
             }
             break;
 
@@ -95,7 +112,8 @@ Player.prototype.handleInput = function (keyPress) {
             if (this.x < 404) {
                 this.x += 101
             } else {
-                console.log("Cannot move offscreen");
+                //onClick="shake(2)" value="Shake Screen"
+                console.log("Cannot move right offscreen");
             }
             break;
 
@@ -103,7 +121,7 @@ Player.prototype.handleInput = function (keyPress) {
             if (this.y < 373) {
                 this.y += 83
             } else {
-                console.log("Cannot move offscreen");
+                console.log("Cannot descend offscreen");
             }
             break;
 
@@ -112,11 +130,8 @@ Player.prototype.handleInput = function (keyPress) {
                 this.y -= 83
             } else if (this.y < 42) {
                 this.wins += 1;
-                this.score = this.wins - this.losses;
-                console.log("You Win! \n Wins: " + this.wins + "\n Loses: " + this.loses + "\n Score: " + this.score);
                 this.y = 373.5;
                 document.getElementById("wins").innerHTML = this.wins;
-                document.getElementById("total").innerHTML = this.score;
             }
             break;
 
