@@ -1,3 +1,17 @@
 body {
     text-align: center;
 }
+
+table {
+   border: 1px solid black;
+   width: 100%;
+} 
+
+winsT, wins {
+    text-align: right;
+}
+
+lossT, loses {
+    text-align: left;
+}
+
