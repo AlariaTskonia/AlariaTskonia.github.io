@@ -155,6 +155,7 @@ for (i = 0; i < 3; i++) {
 
     allEnemies.push(new Enemy())
 };
+
 player =  new Player();
 
 //Alaria Code End*****
