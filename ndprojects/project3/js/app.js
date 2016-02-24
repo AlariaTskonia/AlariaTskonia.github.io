@@ -67,8 +67,8 @@ Enemy.prototype.render = function () {
 
 var Player = function () {
     this.sprite = "images/char-cat-girl.png"; // <reference path="../images/char-cat-girl.png" /> Note to self, Javascript doesn't want trailing periods. ALso, to change the character, change the file target in engine.js row 175 too.
-    this.x = 202; //This places the playable character in the middle of the X axis we want (middle block)
-    this.y = 373.5; // This places the playable character in the bottom row middle block and compensates for the 3d shadow effect on the images. Y axis is Vertical
+    this.x = 202; //This places the playable character at the X axis we want (middle of the middle block).  X axis is horizontal
+    this.y = 373.5; // This places the playable character in the bottom row middle block and compensates for the 3d shadow effect on the images. Y axis is vertical
     this.score = 0; //This would be a total score but I'm not quite there so it doesn't do much yet.
     this.wins = 0; //Players Wins
     this.loses = 0; //Bugs Wins
