@@ -148,9 +148,17 @@ var work = {
         }
     ]
 }
+WebsiteOptimize
 
 var projects = {
     "project": [
+        {
+            "title": "Website Optimization Project",
+            "dates": "February 2017",
+            "description": "Took Camerons Website and made it run within the 60fps limit.",
+            "images": ["images/starrynightnuts.jpg"],
+            "wurl": "http://alariatskonia.github.io/ndprojects/WebsiteOptimize/index.html"
+        },
         {
             "title": "Clone of a Frogger",
             "dates": "October 2015",
