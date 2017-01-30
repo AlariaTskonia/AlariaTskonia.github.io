@@ -156,7 +156,6 @@ var work = {
         }
     ]
 }
-WebsiteOptimize
 
 var projects = {
     "project": [
