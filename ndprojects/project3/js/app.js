@@ -39,7 +39,7 @@ Enemy.prototype.update = function (dt) {
 
     }
 
-//add a limit to RNG http://codereview.stackexchange.com/questions/62018/prevent-repetitive-random-numbers in teh future. This may help limit overlapping bigs.
+//add a limit to RNG http://codereview.stackexchange.com/questions/62018/prevent-repetitive-random-numbers in the future. This may help limit overlapping bugs.
     
     var collision = Math.abs(player.x - this.x);            //Alaria: when the images share the same absolute value x axis *The abs() method returns the absolute value of a number. http://www.w3schools.com/jsref/jsref_abs.asp
     if (collision < 50.5 && this.y === player.y + 18.5) {   //Alaria: a collision is when both images points have the same y axis
