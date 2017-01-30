@@ -68,6 +68,14 @@ var work = {
     "jobs": [
         {
             "employer": "AT&T Mobility - Contract Administration Center",
+            "title": "Senior Sourcing / Contract Specialist - National Finiance",
+            "location": "Riverside, CA",
+            "dates": "January 16, 2017 - Present",
+            "description": "Create YTD expense estimations via accruals, track National MCAC budget, analyze financial data for trends/issues, and offer ideas/submit adjustments as needed.",
+            "wurl": "http://www.att.com"
+        },
+        {
+            "employer": "AT&T Mobility - Contract Administration Center",
             "title": "Senior Sourcing / Contract Specialist - CAC Manager",
             "location": "Riverside, CA",
             "dates": "January 12, 2015 - Present",
