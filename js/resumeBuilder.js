@@ -155,7 +155,7 @@ var projects = {
         {
             "title": "Website Optimization Project",
             "dates": "February 2017",
-            "description": "Took Camerons Website and made it run within the 60fps limit.",
+            "description": "Took Cameron's Website and made it run within the 60fps limit.",
             "images": ["images/starrynightnuts.jpg"],
             "wurl": "http://alariatskonia.github.io/ndprojects/WebsiteOptimize/index.html"
         },
